@@ -5,6 +5,7 @@ import { Foundation } from '@expo/vector-icons';
 import Colors from '../../constants/Colors';
 import { MaterialIcons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
  */
@@ -62,7 +63,7 @@ export default function TabLayout() {
         name="profile"
         options={{
           title: 'Profile',
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="bookmark-box-multiple" size={24} color="black" />,
+          tabBarIcon: ({ color }) => <Feather name="user" size={24} color="black" />,
         }}
       />
     </Tabs>
