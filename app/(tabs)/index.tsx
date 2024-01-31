@@ -1,10 +1,10 @@
-import { StyleSheet, Text, View,TextInput, Image } from 'react-native'
+import { StyleSheet, Text, View,TextInput, Image, Pressable } from 'react-native'
 import React from 'react'
 import { MaterialIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { ScrollView } from 'react-native-gesture-handler';
-
+import { Link, Tabs } from 'expo-router';
 const index = () => {
   return (
     <ScrollView >
@@ -50,7 +50,14 @@ const index = () => {
     
     <View style={styles.boxFood}>
     <View style ={{flexDirection: "row"}}>
-    <Text style={styles.textFood}>MyBurgerLab(Cyberjaya)</Text>
+    <Link href="/two" asChild>
+            <Pressable>
+                {({ pressed }) => (
+                       <Text style={styles.textFood}>MyBurgerLab(Cyberjaya)</Text>
+            )}
+            </Pressable>
+            </Link>
+    
     <AntDesign name="star" size={24} color="orange" style={styles.star} />
     <Text style={styles.textLoc4}>4.7</Text>
     </View>
@@ -58,7 +65,7 @@ const index = () => {
     <Entypo name="back-in-time" size={24} color="grey" style={styles.time} />
     <Text style={styles.textLoc5}>25 min</Text>
     <Entypo name="dot-single" size={24} color="grey"  style={styles.dot}/>
-    <MaterialIcons name="directions-bike" size={24} color="grey" style={styles.dot}/>
+    <MaterialIcons name="directions-bike" size={22} color="grey" style={styles.dot}/>
     <Text style={styles.textLoc5}>RM 7.00 </Text>
     </View>
     </View>
@@ -157,7 +164,7 @@ const styles = StyleSheet.create({
     color: 'grey',
     paddingLeft: 5,
     paddingTop:12,
-    fontSize: 18
+    fontSize: 16
   },
   textCart:{
     color: '#FFFFFF',
