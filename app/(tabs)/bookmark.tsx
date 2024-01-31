@@ -1,5 +1,10 @@
-import { Button, StyleSheet, Text, View, Image} from 'react-native';
+import { Button, StyleSheet, Text, View, Image, Pressable} from 'react-native';
 import React from 'react';
+import { AntDesign } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
+
+import { Link, Tabs } from 'expo-router';
 
 
 
@@ -12,7 +17,7 @@ export default class App extends React.Component{
 
 incrementValue1 = () => {
   this.setState({
-    value: this.state.value + 50,
+    value: this.state.value + 1,
     total_taps: this.state.total_taps + 1,
    
 
@@ -21,75 +26,8 @@ incrementValue1 = () => {
 }
 decrementValue1= () => {
   this.setState({
-    value: this.state.value - 50,
+    value: this.state.value - 1,
     total_taps: this.state.total_taps - 1,
-   
-  })
-  console.log("Value: " + (this.state.value +1))
-}
-resetValue1= () => {
-  this.setState({
-    value: this.state.value = 0,
-    total_taps: this.state.total_taps = 0,
-   
-  })
-  console.log("Value: " + (this.state.value +1))
-}
-incrementValue2 = () => {
-  this.setState({
-    value: this.state.value + 100,
-    total_taps: this.state.total_taps + 1,
-   
-
-  })
-  console.log("Value: " + (this.state.value +1))
-}
-decrementValue2= () => {
-  this.setState({
-    value: this.state.value - 100,
-    total_taps: this.state.total_taps - 1,
-   
-  })
-  console.log("Value: " + (this.state.value +1))
-}
-resetValue2= () => {
-  this.setState({
-    value: this.state.value = 0,
-    total_taps: this.state.total_taps = 0,
-   
-  })
-  console.log("Value: " + (this.state.value +1))
-}
-incrementValue3 = () => {
-  this.setState({
-    value: this.state.value + 180,
-    total_taps: this.state.total_taps + 1,
-   
-
-  })
-  console.log("Value: " + (this.state.value +1))
-}
-incrementValue4 = () => {
-  this.setState({
-    value: this.state.value +250,
-    total_taps: this.state.total_taps + 1,
-   
-
-  })
-  console.log("Value: " + (this.state.value +1))
-}
-decrementValue3= () => {
-  this.setState({
-    value: this.state.value - 80,
-    total_taps: this.state.total_taps - 1,
-   
-  })
-  console.log("Value: " + (this.state.value +1))
-}
-resetValue3= () => {
-  this.setState({
-    value: this.state.value = 0,
-    total_taps: this.state.total_taps = 0,
    
   })
   console.log("Value: " + (this.state.value +1))
@@ -98,113 +36,143 @@ resetValue3= () => {
 
   render(){
       return (
-    <View style={styles.container}>
-       <Text style={styles.title}>Set Saving</Text>
-       <View style ={{flexDirection: "row"}}> 
-       <Text style={styles.cSaving}>MYR</Text>
-       <Text style={{ fontSize: 50, paddingBottom: 30, color: '#1876D1', alignSelf: "center",}}>{" "+this.state.value}</Text>
-       </View>
-      
-    <Text style={styles.title2}>Choose:</Text>
-    <View style={{flexDirection:'row'}}> 
-    <View style={styles.pButton1}>
-          <Button color='#FFFFFF'   onPress={this.incrementValue1} title="50"/>
-    </View>
-    <View style={styles.pButton1}>
-         <Button color='#FFFFFF' onPress={this.incrementValue2} title="100"/>
-    </View>
-    <View style={styles.pButton1}>
-          <Button color='#FFFFFF'   onPress={this.incrementValue3} title="180"/>
-    </View>
-    <View style={styles.pButton1}>
-          <Button color='#FFFFFF'   onPress={this.incrementValue4} title="250"/>
-    </View>
-    </View> 
-    <View style={styles.topbutton}>
-      <Button  color="#FFFFFF" onPress={this.resetValue2} title="Continue"/>
-    </View>
-    <View >
-      <Button  color="#FFFFFF" onPress={this.resetValue2} title="Reset"/>
-    </View>
-
-   </View>      
+        <View>
+        <View style={styles.boxOrder}>
+        <View style ={{flexDirection: "row"}}>
+        <Image style={styles.imgOrder}
+                 source={require("../../assets/images/bg2.webp")} />
+          <View style={styles.boxOrder1}>
+          <Text style={styles.textOrder}>Vivien's Husband</Text>
+          <View style ={{flexDirection: "row"}}>
+              <Entypo name="location-pin" size={24} color="red" style={styles.star} />
+              <Text style={styles.textRev}>250 m(10 Minutes)</Text>
+          </View>
+          <View style={styles.boxOrder4}>
+          <Text style={styles.textOrder2}>Add To Cart</Text>
+          </View>
+          </View>
+          
+        </View>
         
-      
-     
- 
-    
+        </View>
+       
+      </View>
   );
   }
 
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-
-    alignItems: 'center',
-    paddingTop: 50,
-    backgroundColor: '#000000'
-  },
-  cSaving: {
-    fontSize: 15,
-    marginLeft: 25,
-   
-    color: '#837F7F',
-    fontWeight: 'bold',
-  },
-  title: {
-    fontSize: 30,
-    color: "#ECF0F1",
-    marginLeft: 25,
-    paddingBottom:50,
-   
-  },
-  title2: {
-    fontSize: 20,
-    color: "#ECF0F1",
-    marginRight: 280,
-    paddingBottom:20,
-   
-  },
-  box1: {
-    marginLeft: 30,
-    marginRight: 30,
-    backgroundColor: "#FEFEFE",
-    padding: 18,
-    shadowColor: "black",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.4,
-    shadowRadius: 6,
+  boxOrder:{
+    backgroundColor: '#FFFFFF',
+    height: 180,
+    width: 400,
+    marginLeft: 5,
+    shadowRadius: 5,
     elevation: 5,
-    borderRadius: 6,
-    marginTop: 30,
-    
-  },
-
- 
-  
-  topbutton: { 
-    marginRight: 8,
-    justifyContent: "center",
-    borderRadius: 30,
-    borderColor: '#FFFFFF',
-    paddingHorizontal: 140,
-    alignSelf: "center",
-    backgroundColor: "#1876D1",
-    borderWidth: 2,
     marginTop: 50,
-    paddingVertical: 5,
-  },
+    borderRadius: 20,
   
+  },
+  imgOrder:{
+    height: 140,
+    width: 180,
+    marginTop: 20,
+    marginLeft: 20,
+    borderRadius: 20,
+},
+boxOrder1:{
+  
+},
+boxOrder2:{
+  backgroundColor: '#FFFFFF',
+  height: 480,
+  width: 440,
+  marginLeft: 5,
+  shadowRadius: 5,
+  elevation: 5,
+  marginTop: 300,
+  borderRadius: 5,
 
-  pButton1: { 
-    marginRight: 10,
-    borderRadius: 15,
-    borderColor: '#939393',
-    paddingHorizontal: 14,
-    borderWidth: 2,
-    backgroundColor: "#434343",
+},
+boxOrder3:{
+  backgroundColor: '#000000',
+  height: 50,
+  width:390,
+  marginLeft: 5,
+  shadowRadius: 5,
+  elevation: 5,
+  marginTop: 30,
+  borderRadius: 20,
+
+},
+textOrder:{
+    marginLeft: 12,
+    marginTop: 30,
+    fontSize: 18,
+    fontWeight:'bold',
   },
+  textOrder2:{
+    textAlign: 'center',
+    marginTop: 10,
+    fontSize: 18,
+    fontWeight:'bold',
+    color: "#FFFFFF",
+  },
+  boxOrder4:{
+    backgroundColor: '#000000',
+    height: 40,
+    width: 180,
+    marginLeft: 10,
+    shadowRadius: 5,
+    elevation: 5,
+    marginTop: 30,
+    borderRadius: 10
   
+  },
+  star:{
+    paddingTop:10,
+    paddingLeft:10,
+  },
+  textRev:{
+    color: 'grey',
+    paddingLeft: 5,
+    paddingTop:12,
+    fontSize: 15,
+  },
+  textPrice:{
+    marginLeft: 18,
+    marginTop: 52,
+    fontSize: 18,
+    fontWeight:'bold',
+  },
+  minus:{
+    paddingTop:50,
+    paddingLeft:12,
+  },
+  number:{
+    paddingTop:48,
+    paddingLeft:5,
+    fontSize: 25,
+  },
+  tDelivery:{
+    marginLeft: 18,
+    marginTop: 22,
+    fontSize: 18,
+    fontWeight:'bold',
+  },
+  tDeliveryDetails:{
+    marginLeft: 188,
+    marginTop: 22,
+    fontSize: 18,
+    fontWeight:'bold',
+    color: "#E46806"
+  },
+  tDeliveryDetails2:{
+    marginLeft: 250,
+    marginTop: 22,
+    fontSize: 18,
+    fontWeight:'bold',
+    color: "#E46806"
+  },
 });

@@ -40,8 +40,8 @@ decrementValue1= () => {
              source={require("../assets/images/bg1.webp")} />
         <View style={styles.boxOrder}>
         <View style ={{flexDirection: "row", backgroundColor: '#E2E2E2'}}>
-            <Text style={styles.textOrder}>Bondi Kicker</Text>
-            <Text style={styles.textPrice}>RM 31.900</Text>
+            <Text style={styles.textOrder}>Vivien's Husband</Text>
+            <Text style={styles.textPrice}>RM 31.90</Text>
         </View>
         
         </View>
@@ -103,7 +103,7 @@ textOrder:{
   fontWeight:'bold',
 },
 textPrice:{
-  marginLeft: 130,
+  marginLeft: 90,
   marginTop: 25,
   fontSize: 20,
   fontWeight:'bold',

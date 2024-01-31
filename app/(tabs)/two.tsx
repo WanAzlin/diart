@@ -102,7 +102,7 @@ incrementValue2 = () => {
         </View>
          <View style ={{flexDirection: "row"}}>
     
-           <Text style={styles.textPrice}>RM 21.90</Text>
+           <Text style={styles.textPrice}>RM 31.90</Text>
            <Link href="/order" asChild>
             <Pressable>
                 {({ pressed }) => (
@@ -126,7 +126,7 @@ incrementValue2 = () => {
         </View>
          <View style ={{flexDirection: "row"}}>
     
-           <Text style={styles.textPrice}>RM 31.90</Text>
+           <Text style={styles.textPrice}>RM 21.90</Text>
            <AntDesign name="plussquare" size={30} color="black" onPress={this.incrementValue2}style={styles.plus} />
         </View>
     </View>
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   boxCat:{
-    backgroundColor: '#22BE10',
+    backgroundColor: '#066705',
     height: 100,
     width: 260,
     marginLeft: 20,
@@ -203,7 +203,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
     fontSize: 20,
     fontWeight:'bold',
-    color: "#22BE10",
+    color: "#066705",
   },
   boxCat1:{
     flexDirection: 'row',

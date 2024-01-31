@@ -15,7 +15,7 @@ const index = () => {
        <MaterialIcons name="keyboard-arrow-down" size={24} style={styles.arrowDown} color="white" />
        <View style={styles.boxORG}>
        <AntDesign name="shoppingcart" size={24} color="white" style={styles.cart} />
-       <Text style={styles.textCart}>5</Text>
+       <Text style={styles.textCart}>0</Text>
        </View>
        </View>
        <TextInput  placeholder='Search Item'  style={styles.TextInput}/>
