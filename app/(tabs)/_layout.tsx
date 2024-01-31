@@ -64,6 +64,7 @@ export default function TabLayout() {
         options={{
           title: 'Profile',
           tabBarIcon: ({ color }) => <Feather name="user" size={24} color="black" />,
+          
         }}
       />
     </Tabs>
